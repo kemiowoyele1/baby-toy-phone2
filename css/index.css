@@ -1,0 +1,396 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+@font-face {
+    font-family: toon;
+    src: url("../fonts/Juicy.ttf");
+  }
+  @font-face {
+      font-family: caps;
+      src: url("../fonts/PaisleyCaps.ttf");
+    }
+body, .container{
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+    /* background-color: rgb(20, 44, 44); */
+    /* background: url(../animals/stock.png); */
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    background: linear-gradient(180deg, pink, powderblue);
+    
+  }
+.phone{
+    position: absolute;
+    width: 98%;
+    height: 98%;
+    top: 1%;
+    left: 1%;
+    overflow: hidden;
+    background-color: rgb(71, 75, 75);
+    border-radius: 5%;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+    background: rgb(206,237,249);
+background: linear-gradient(90deg, rgb(7, 204, 0) 0%, rgb(108, 240, 126) 49%, rgb(0, 204, 10) 100%);
+
+}
+.top-slide{
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background-color: rgb(206, 224, 224);
+    border-radius: 5%;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    border-bottom: 2px solid rgba(81, 55, 112, 0.842);
+    background: rgb(247,204,247);
+background: linear-gradient(90deg, rgb(212, 181, 0) 0%, rgb(245, 226, 144) 49%, rgb(211, 172, 0) 100%);
+
+}
+.screen1{
+    position: absolute;
+    width: 98%;
+    height: 60%;
+    top: 10%;
+    left: 1%;
+    overflow: hidden;
+    background-color: rgb(20, 24, 24);
+    border-radius: 5%;
+    /* border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%; */
+    background: rgb(249,236,250);
+background: radial-gradient(circle, rgba(249,236,250,1) 23%, rgba(201,248,251,1) 100%);
+}
+.screen2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    overflow: hidden;
+    border-radius: 5%;
+    background-image: url(../images/music.gif);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    font-family: caps;
+    font-size: 50px;
+    display: none;
+     }
+.btn-container{
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    top: 5%;
+    left: 5%;
+    overflow: hidden;
+    /* background-color: rgb(61, 58, 233); */
+    border-radius: 5%;
+     box-shadow: none;
+
+}
+.top-btns{
+    position: absolute;
+    width: 25%;
+    height: 80%;
+    top: 10%;
+    left: 7%;
+    overflow: hidden;
+    background-color: rgb(93, 233, 58);
+    border-radius: 5%;
+    
+ }
+ 
+   
+ .top-btns::after{
+    content: "";
+    position: absolute;
+    width:80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+    overflow: hidden;
+    background-image: url(../images/music.png);
+    background-size: 100% 100%;
+    }
+ .top-btn1{
+    border-bottom-left-radius: 50%; 
+    background: rgb(236, 248, 250);
+    background: radial-gradient(circle, rgb(236, 250, 250) 23%, rgb(107, 164, 249) 100%);
+    box-shadow: 0 0 5px rgb(3, 47, 82), inset 1px 1px 8px rgb(4, 46, 94);
+ 
+ }
+ .top-btn2{
+    left: 35%;
+    width: 30%;
+    background: rgb(252, 17, 0);
+    background: radial-gradient(circle, rgb(250, 247, 236) 23%, rgb(249, 112, 107) 100%);
+    box-shadow: 0 0 5px rgb(82, 8, 3), inset 1px 1px 8px rgb(94, 10, 4);
+   
+ }
+ .top-btn3{
+    left: 68%;
+    border-bottom-right-radius: 50%; 
+    background: rgb(239,250,236);
+    background: radial-gradient(circle, rgba(239,250,236,1) 23%, rgb(192, 107, 249) 100%);
+    box-shadow: 0 0 5px rgb(32, 1, 44), inset 1px 1px 8px rgb(32, 1, 53);
+
+ }
+.bottom-slide{
+    position: absolute;
+    width: 96%;
+    height: 35%;
+    top: 62%;
+    left: 2%;
+    overflow: hidden;
+    box-shadow:none;
+   }
+.btnb{
+    position: absolute;
+    width: 28%;
+    height: 28%;
+    top: 3%;
+    left: 3%;
+    overflow: hidden;
+    background-color: rgb(90, 226, 85);
+    border-radius: 15%; 
+    background: rgb(239,250,236);
+background: radial-gradient(circle, rgba(239,250,236,1) 23%, rgba(195,249,107,1) 100%);
+box-shadow: 0 0 5px rgb(19, 82, 3), inset 0 0 8px rgb(19, 94, 4);
+border: 1px ridge rgba(128, 224, 64, 0);
+border-width: 1px 5px 5px 1px;
+}
+.btnb:hover{
+    border-width: 2px;
+}
+.btnb2{
+    left: 35%;
+    background: rgb(236, 248, 250);
+    background: radial-gradient(circle, rgb(236, 250, 250) 23%, rgb(107, 249, 213) 100%);
+    box-shadow: 0 0 5px rgb(3, 82, 65), inset 1px 1px 8px rgb(4, 94, 90);
+ 
+    
+}
+.btnb3{
+    left: 67%;
+    background: rgb(236, 248, 250);
+    background: radial-gradient(circle, rgb(236, 250, 250) 23%, rgb(107, 164, 249) 100%);
+    box-shadow: 0 0 5px rgb(3, 47, 82), inset 1px 1px 8px rgb(4, 46, 94);
+ 
+}
+.btnb4{
+    top: 35%; 
+    background: rgb(239,250,236);
+    background: radial-gradient(circle, rgba(239,250,236,1) 23%, rgb(250, 24, 175) 100%);
+    box-shadow: 0 0 5px rgb(82, 3, 47), inset 1px 1px 8px rgb(85, 5, 54);
+       
+}
+.btnb5{
+    top: 35%; 
+    left: 35%;   
+    background: rgb(239,250,236);
+    background: radial-gradient(circle, rgba(239,250,236,1) 23%, rgb(145, 3, 102) 100%);
+    box-shadow: 0 0 5px rgb(82, 3, 62), inset 1px 1px 8px rgb(94, 4, 54);
+
+}
+.btnb6{
+    top: 35%; 
+    left: 67%;   
+    background: rgb(239,250,236);
+    background: radial-gradient(circle, rgba(239,250,236,1) 23%, rgb(192, 107, 249) 100%);
+    box-shadow: 0 0 5px rgb(32, 1, 44), inset 1px 1px 8px rgb(32, 1, 53);
+
+}
+.btnb7{
+    top: 67%; 
+    left: 3%; 
+    background: rgb(252, 206, 0);
+    background: radial-gradient(circle, rgb(250, 247, 236) 23%, rgb(249, 216, 107) 100%);
+    box-shadow: 0 0 5px rgb(82, 64, 3), inset 1px 1px 8px rgb(94, 73, 4);
+    
+}
+.btnb8{
+    top: 67%; 
+    left: 35%; 
+    background: rgb(252, 113, 0);
+    background: radial-gradient(circle, rgb(250, 247, 236) 23%, rgb(249, 152, 107) 100%);
+    box-shadow: 0 0 5px rgb(82, 41, 3), inset 1px 1px 8px rgb(94, 45, 4);
+    
+}
+.btnb9{
+    top: 67%; 
+    left: 67%;  
+    background: rgb(252, 17, 0);
+    background: radial-gradient(circle, rgb(250, 247, 236) 23%, rgb(249, 112, 107) 100%);
+    box-shadow: 0 0 5px rgb(82, 8, 3), inset 1px 1px 8px rgb(94, 10, 4);
+   
+}
+ .btn-span{
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+  box-shadow: none; 
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+ 
+ }
+.overlay{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(233, 58, 195, 0.507);
+    z-index: 20;
+    display: none;
+    background-size: 100% 100%;
+  background-repeat: no-repeat;
+ 
+ }
+ .callscreen{
+     position: absolute;
+     width: 80%;
+     height: 70%;
+     top: 5%;
+     left: 5%;
+     background-color: rgb(78, 233, 58);
+     border-radius: 10%;
+     animation: caller 1s ease infinite both;
+     background: rgb(206,237,249);
+     background: linear-gradient(90deg, rgba(206,237,249,1) 0%, rgba(247,226,249,1) 49%, rgba(185,238,228,1) 100%);
+     background-size: 100% 100%;
+  background-repeat: no-repeat;
+     
+  }
+  .callscreen2{
+      position: absolute;
+      width: 90%;
+      height: 90%;
+      top: 5%;
+      left: 5%;
+      background-color: rgb(227, 58, 233);
+      border-radius: 10%;
+      background: rgb(252, 0, 239);
+      background: radial-gradient(circle, rgb(250, 247, 236) 23%, rgb(249, 107, 242) 100%);
+      box-shadow: 0 0 5px rgb(82, 3, 78), inset 1px 1px 8px rgb(91, 4, 94);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+     
+    }
+    
+  .end-call{
+    position: absolute;
+    width: 50%;
+    height: 20%;
+    top: 75%;
+    left: 25%;
+    border-radius: 50%;
+    background-image: url(../images/end.png);
+    background-size: 100% 100%;
+      background-repeat: no-repeat;
+     
+}
+    @keyframes caller {
+        0%{
+            left: 15%;
+        } 
+      
+    }
+    .lights-container{
+        position: absolute;
+        width: 90%;
+        height: 10%;
+        top: 0%;
+        left: 5%;
+        box-shadow: none;
+    }
+    .dash{
+        position: absolute;
+        width: 20%;
+        height: 20%;
+        top: 40%;
+        left: 40%;
+        background: rgb(176, 216, 208);
+        box-shadow: inset 1px 1px 2px rgb(0, 0, 0);
+        animation: dash 2s infinite;
+    }
+
+    @keyframes dash{
+        0%{
+            background-color: greenyellow;
+        }
+        20%{
+            background-color: yellow;
+        }
+        40%{
+            background-color: deeppink;
+        }
+        60%{
+            background-color: purple;
+        }
+        80%{
+            background-color: blue;
+        }
+    }
+    .lights{
+        position: absolute;
+        width: 10%;
+        height: 50%;
+        top: 25%;
+        left: 10%;
+        border-radius: 50%;
+        background: rgb(47, 236, 227);
+        box-shadow: 0 0 15px rgb(182, 238, 241), inset 1px 1px 8px rgb(250, 250, 250);
+        animation: lights 2s infinite;
+    }
+    .light2{
+        left: 25%;
+        animation-delay: 0.3s;
+    }
+    .light3{
+        left: 65%;
+        animation-delay: 0.6s;
+    }
+    .light4{
+        left: 80%;
+        animation-delay: 0.9s;
+    }
+    @keyframes lights{
+        0%{
+            background: radial-gradient(circle, rgb(255, 0, 179) 20%, rgba(255, 0, 170, 0)20%);
+            box-shadow: 0 0 15px rgb(255, 0, 157), inset 1px 1px 8px rgb(255, 0, 157); 
+            background-size: 10% 10%;
+        }
+        20%{
+            background: radial-gradient(circle, rgb(255, 0, 0) 20%, rgba(255, 0, 170, 0)20%);
+            box-shadow: 0 0 15px rgb(255, 0, 0), inset 1px 1px 8px rgb(255, 0, 0); 
+            background-size: 10% 10%;
+        }
+        40%{
+            background: radial-gradient(circle, rgb(255, 238, 0) 20%, rgba(255, 0, 170, 0)20%);
+            box-shadow: 0 0 15px rgb(255, 238, 0), inset 1px 1px 8px rgb(255, 230, 0); 
+            background-size: 10% 10%;
+        }
+        60%{
+            background: radial-gradient(circle, rgb(0, 195, 255) 20%, rgba(255, 0, 170, 0)20%);
+            box-shadow: 0 0 15px rgb(0, 153, 255), inset 1px 1px 8px rgb(0, 238, 255); 
+            background-size: 10% 10%;
+        }
+        80%{
+            background: radial-gradient(circle, rgb(43, 255, 0) 20%, rgba(255, 0, 170, 0)20%);
+            box-shadow: 0 0 15px rgb(94, 255, 0), inset 1px 1px 8px rgb(0, 255, 42); 
+            background-size: 10% 10%;
+        }
+    }
+    audio{
+        visibility: hidden;
+    }

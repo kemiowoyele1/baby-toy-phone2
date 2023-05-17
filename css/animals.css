@@ -1,0 +1,34 @@
+
+ .span1{
+    background-image: url(../images/animals/cat.png);
+  }
+.span2{
+   background-image: url(../images/animals/chicken.png);
+ }
+
+.span3{
+   background-image: url(../images/animals/cow.png);
+ }
+ 
+.span4{
+   background-image: url(../images/animals/dog.png);
+ }
+ .span5{
+     background-image: url(../images/animals/duck.png);
+   }
+   
+.span6{
+   background-image: url(../images/animals/elephant.png);
+ }
+ 
+.span7{
+   background-image: url(../images/animals/lion.png);
+ }
+ 
+.span8{
+   background-image: url(../images/animals/pig.png);
+ }
+ 
+.span9{
+   background-image: url(../images/animals/tiger.png);
+ }

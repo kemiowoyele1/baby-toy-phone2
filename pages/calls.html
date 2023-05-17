@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toy phone call page</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/calls.css">
+    <script src="../cordova.js"></script>
+ 
+    <style>
+        
+        .phone{
+            background: rgb(206,237,249);
+        background: linear-gradient(90deg, rgb(221, 250, 198) 0%, rgb(231, 247, 240) 49%, rgb(199, 250, 210) 100%);
+        
+        }
+        
+        .top-slide{
+            background: rgb(247,204,247);
+        background: linear-gradient(90deg, rgb(248, 247, 203) 0%, rgb(248, 246, 237) 49%, rgb(245, 240, 198) 100%);
+        
+        }
+        
+ .callscreen{
+     height: 60%;
+    
+  }
+  
+ .top-btn1::after{
+     background-image: url(../images/music.png);
+     background-size: 100% 100%;
+  }
+ .top-btn2::after{
+     background-image: url(../images/0.png);
+     background-size: 100% 100%;
+   }
+ .top-btn3::after{
+     background-image: url(../images/animals/elephant.png);
+     background-size: 100% 100%;
+  }
+            </style>
+</head>
+<body>
+    <div class="container">
+        <div class="phone">
+            <div class="overlay">
+                <div class="callscreen">
+                    <div class="callscreen2"></div>
+                </div>
+                <div class="end-call"></div>
+            </div>
+     
+            <div class="top-slide">
+
+                <div class="lights-container">
+                    <div class="lights light1"></div>
+                    <div class="lights light2"></div>
+                    <div class="lights light3"></div>
+                    <div class="lights light4"></div>
+                    <div class="dash"></div>
+                </div>
+
+                <div class="screen1">
+                    <div class="screen2"></div>
+                </div>
+                <div class="btn-container">
+                    <a href="music.html">
+                        <div class="top-btns top-btn1"></div>
+                        </a>
+                        <a href="../index.html">
+                            <div class="top-btns top-btn2"></div>
+                        </a>
+                        <a href="animals.html">
+                            <div class="top-btns top-btn3"></div>
+                        </a> </div>
+            </div>
+            <div class="bottom-slide">
+                <div class="button-container">
+                    <div class="btnb btnb1"><span class="btn-span span1"></span></div>
+                    <div class="btnb btnb2"><span class="btn-span span2"></span></div>
+                    <div class="btnb btnb3"><span class="btn-span span3"></span></div>
+                    <div class="btnb btnb4"><span class="btn-span span4"></span></div>
+                    <div class="btnb btnb5"><span class="btn-span span5"></span></div>
+                    <div class="btnb btnb6"><span class="btn-span span6"></span></div>
+                    <div class="btnb btnb7"><span class="btn-span span7"></span></div>
+                    <div class="btnb btnb8"><span class="btn-span span8"></span></div>
+                    <div class="btnb btnb9"><span class="btn-span span9"></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio src="" id="sound" loop></audio>
+    <audio src="../sounds/music.mp3" id="music" loop autoplay></audio>
+  
+    
+    <script src="../js/pause.js"></script>
+  
+    <script src="../js/call.js"></script>
+    <script src="../js/admob.js"></script>
+
+</body>
+</html>

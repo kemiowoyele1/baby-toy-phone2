@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toy phone music page</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../cordova.js"></script>
+ 
+</head>
+<style>
+        
+    .phone{
+        background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgb(224, 220, 220) 0%, rgb(255, 255, 255) 49%, rgb(233, 231, 231) 100%);
+    
+    }
+    
+    .top-slide{
+        background: rgb(252, 252, 252);
+    background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(243, 235, 235) 49%, rgb(255, 255, 255) 100%);
+    
+    }
+    
+ .top-btn1::after{
+     background-image: url(../images/0.png);
+     background-size: 100% 100%;
+  }
+ .top-btn2::after{
+     background-image: url(../images/call.png);
+     background-size: 100% 100%;
+   }
+ .top-btn3::after{
+     background-image: url(../images/animals/elephant.png);
+     background-size: 100% 100%;
+  }
+        </style>
+<body>
+    <div class="container">
+        <div class="phone">
+            <!-- <div class="overlay">
+                <div class="callscreen">
+                    <div class="callscreen2"></div>
+                </div>
+            </div> -->
+            <div class="top-slide">
+                <div class="lights-container">
+                    <div class="lights light1"></div>
+                    <div class="lights light2"></div>
+                    <div class="lights light3"></div>
+                    <div class="lights light4"></div>
+                    <div class="dash"></div>
+                </div>
+                <div class="screen1">
+                    <div class="screen2"></div>
+                </div>
+                <div class="btn-container">
+                   <a href="../index.html">
+                    <div class="top-btns top-btn1"></div>
+                    </a>
+                    <a href="call.html">
+                        <div class="top-btns top-btn2"></div>
+                    </a>
+                    <a href="animals.html">
+                        <div class="top-btns top-btn3"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="bottom-slide">
+                <div class="button-container">
+                    <div class="btnb btnb1"></div>
+                    <div class="btnb btnb2"></div>
+                    <div class="btnb btnb3"></div>
+                    <div class="btnb btnb4"></div>
+                    <div class="btnb btnb5"></div>
+                    <div class="btnb btnb6"></div>
+                    <div class="btnb btnb7"></div>
+                    <div class="btnb btnb8"></div>
+                    <div class="btnb btnb9"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio src="" id="sound"></audio>
+    <audio src="../sounds/music.mp3" id="music" loop autoplay></audio>
+  
+    <script src="../js/music.js"></script>
+    <script src="../js/admob.js"></script>
+</body>
+</html>

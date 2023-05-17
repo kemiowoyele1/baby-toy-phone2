@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>elephant music page</title>
+    <script src="../cordova.js"></script>
+ 
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(45deg, rgb(48, 184, 3),
+             rgb(173, 1, 173), rgb(255, 251, 0));
+            background-size: 2% 100%;
+    
+        }
+        .elephant{
+            width: 100%;
+            /* max-width: 550px;
+            min-width: 350px;
+            min-height: 500px; */
+            height: 96%;
+            /* width: 410px;
+            height: 580px; */
+            position: absolute;
+            top: 2%;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+        .head-container{
+            width: 95%;
+            height: 40%;
+            position: absolute;
+            top: 3%;
+            left: 2.5%; 
+            /* overflow: hidden; */
+            z-index: 10;
+        }
+        .head{
+            width: 50%;
+            height: 90%;
+            position: absolute;
+            top: 3%;
+            left: 25%; 
+            z-index: 1;
+            background: radial-gradient(circle, rgb(0, 255, 255),rgb(3, 184, 184)) ;
+        border-radius: 200%;
+            box-shadow: black inset 2px 2px 15px,
+                        black inset -2px -2px 15px,
+                        black  2px 2px 5px,
+                        black -2px -2px 5px;
+                }
+        /* .head::before{
+            content: "";
+            width: 110%;
+            height: 110%;
+            position: absolute;
+            top: 0%;
+            left: -8%; 
+            background: radial-gradient(circle, rgb(0, 255, 255),rgb(3, 184, 184)) ;
+            border-radius: 200% 200% 80% 80%;
+            box-shadow: black inset 0px -2px 5px,
+                        black 0px 0px 5px;
+                        border-radius: 56% 44% 33% 67% / 27% 41% 59% 73% ;
+            transform: rotate(-45deg);
+        } */
+        .eye-glass{
+            width: 100%;
+            height: 30%;
+            position: absolute;
+            top: -8%;
+            left: 0%; 
+            z-index: 10;
+            }
+        .specs{
+            width: 15%;
+            height: 40%;
+            position: absolute;
+            top: 30%;
+            left: -10%; 
+            background: rgb(195, 0, 255);
+            border-radius: 50%  10% 10%  50%;
+            box-shadow: black inset 0 0 5px,
+                        black 0 0 5px;
+            /* transform: rotate(-15deg); */
+            background: linear-gradient(90deg, rgb(195, 0, 255), 
+            rgb(146, 125, 150), rgb(140, 0, 255));
+            z-index: 1000;
+        }
+        .spec2{
+            left: 97%;
+            transform: rotate(180deg);    
+        }
+        .glass{
+            content: "";
+            width: 55%;
+            height: 70%;
+            position: absolute;
+            top: 15%;
+            left: -5%; 
+            background: rgb(250, 234, 255);
+            border-radius: 200%;
+            box-shadow: black inset 0 0 5px,
+                        black 0 0 5px;
+            /* transform: rotate(-15deg);     */
+       
+        }
+        /* .glass2{
+            left: 60%;
+            transform: rotate(15deg);     
+       
+        } */
+        .spec-center{
+             background: radial-gradient(circle, rgb(116, 2, 145) 95%, 
+            rgb(255, 255, 255)98%, rgb(89, 1, 100) 100%);
+             border-radius: 100% 100% 0 0;
+            /* border: 2px ridge rgb(47, 1, 78); */
+            z-index: 1;
+            width: 51%;
+            height: 60%;
+            position: absolute;
+            top: 0%;
+            left: 24.5%; 
+            box-shadow: black inset 0 0 5px,
+                        black -2px -2px 5px;
+         
+        }
+        .spec-handle{
+            width: 3%;
+            height: 50%;
+            position: absolute;
+            top: -10%;
+            left: -2%; 
+            background: linear-gradient(90deg, rgb(195, 0, 255), 
+            rgb(219, 63, 250), rgb(140, 0, 255));
+             z-index: 1;
+            border-radius: 10%;
+             box-shadow: black inset 0 0 5px,
+                        black 0 0 5px;
+            /* transform: rotate(68deg); */
+        }
+        .spec-handle3{
+            width: 50%;
+            height: 5%;
+            position: absolute;
+            top: 70%;
+            left: 55%; 
+            background: linear-gradient(90deg, rgb(195, 0, 255), 
+            rgb(219, 63, 250), rgb(140, 0, 255));
+             z-index: 1;
+            border-radius: 10%;
+             box-shadow: black inset 0 0 5px,
+                        black 0 0 5px;
+            transform: rotate(-35deg);
+        }
+         .spec-handle::after{
+            content: "";
+            width: 500%;
+            height: 20%;
+            position: absolute;
+            top: -10%;
+            left: -200%; 
+            background: linear-gradient(90deg, rgb(195, 0, 255), 
+            rgb(219, 63, 250), rgb(140, 0, 255));
+            border-radius: 50%;
+             z-index: 1;
+             box-shadow: black inset 0 0 5px,
+                        black 0 0 5px;
+         }
+         .spec-handle3::after{
+            content: "";
+            width: 20%;
+            height: 200%;
+            top: -50%;
+            left: 0%; 
+           }
+        .spec-handle::before{
+            content: "";
+            width: 70%;
+            height: 7%;
+            position: absolute;
+            top: -5%;
+            left: -90%; 
+            background: rgb(252, 252, 252);
+            border-radius: 50%;
+             z-index: 2;
+                }
+        .spec-handle3::before{
+            width: 7%;
+            height: 70%;
+            top: 55%;
+            left: 7%; 
+                } 
+
+                .spec-handle2{
+            left: 97%; 
+            /* transform: rotate(-68deg); */
+      
+        }
+        /* .spec-handle3{
+            left: 95%; 
+            top: 45%;
+            transform: rotate(-120deg);
+      
+        } */
+        .eye-case{
+            width: 70%;
+            height: 20%;
+            position: absolute;
+            top: 28%;
+            left: 15%; 
+          
+        }
+        .eyes{
+            width: 30%;
+            height: 100%;
+            position: absolute;
+            top: 0%;
+            left: 0%; 
+            background: rgb(255, 255, 255);
+           border: 0.5px ridge black;
+           border-radius: 50% ;
+           background-position: 50% 50%;
+           border-top: 2px solid black;
+           box-shadow: 0px -5px 8px deeppink;
+        }
+        .eye2{
+            left: 70%; 
+      
+        }
+.inner-eye{
+    background: rgb(2, 11, 61);
+    height: 70%;
+    width: 70%;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgb(64, 64, 70) inset, -2px -2px 5px rgb(72, 69, 90) inset;
+   
+}
+.inner-eye::before{
+    content: "";
+    background: rgb(255, 255, 255);
+    height: 30%;
+    width: 30%;
+    position: absolute;
+    top: 15%;
+    left: 45%;
+    border-radius: 50%;
+}
+.inner-eye::after{
+    content: "";
+    background: rgba(206, 211, 241, 0);
+    height: 80%;
+    width: 80%;
+    position: absolute;
+    top: 7%;
+    left: 10%;
+    border-radius: 50%;
+    border-bottom: 5px solid rgba(42, 74, 255, 0.493);
+    transform: rotate(5deg);
+}
+.nose{
+    height: 25%;
+    width: 30%;
+    position: absolute;
+    top: 45%;
+    left: 37%;
+    border-radius: 50%;
+    box-shadow: 0 0 2px rgb(0, 0, 0) inset,0 0 2px rgb(0, 0, 0) inset;
+    background: radial-gradient(circle, rgb(221, 87, 255), 
+            rgb(67, 1, 70), rgb(0, 0, 0));
+    
+}
+.mouth{
+    height: 30%;
+    width: 40%;
+    position: absolute;
+    top: 59%;
+    left: 30%;
+    border-radius: 50%;
+   border-bottom: 10px ridge rgb(255, 0, 179); 
+ 
+}
+.ear{
+    height: 80%;
+    width: 30%;
+    position: absolute;
+    top: 2%;
+    left: 3%;
+    background: radial-gradient(circle, rgb(0, 255, 255),rgb(3, 184, 184)) ;
+    border-radius: 200% 200% 80% 80%;
+    box-shadow: black inset 0px -2px 5px,
+                        black 0px 0px 5px;
+     border-radius: 40% 60% 66% 34% / 25% 30% 70% 75% ; 
+          
+}
+.ear:hover{
+    transform: rotate(-25deg);
+}
+.ear2:hover{
+    transform: rotate(25deg);
+}
+.ear2{
+    left: 67%;
+    border-radius: 73% 27% 45% 55% / 35% 28% 72% 65% ;}
+.ear::after{
+    content: "";
+    height: 70%;
+    width: 70%;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    background: radial-gradient(circle, rgb(255, 0, 212),rgb(136, 1, 75)) ;
+    border-radius: 200% 200% 80% 80%;
+    box-shadow: black inset 0px -2px 5px,
+                        black 0px 0px 5px;
+     border-radius: 40% 60% 66% 34% / 25% 30% 70% 75% ; 
+      /* transform: rotate(-45deg); */
+          
+}
+.ear2::after{
+    border-radius: 73% 27% 45% 55% / 35% 28% 72% 65% ;
+}
+.elephant-body{
+    height: 70%;
+    width: 96%;
+    position: absolute;
+    top: 30%;
+    left: 2%;
+    z-index: 1;
+}
+.body-top{
+    height: 60%;
+    width: 94%;
+    position: absolute;
+    top: 0%;
+    left: 3%;
+    background: radial-gradient(circle, rgb(0, 255, 255),rgb(3, 184, 184)) ;
+    border-radius: 200% 200% 120% 120%;
+    box-shadow: black inset 0px -2px 5px,
+                        black 0px 0px 5px;
+    z-index: 2;
+    /* border-radius: 50%; */
+}
+.body-bottom{
+    height: 60%;
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    background: radial-gradient(circle, rgb(0, 255, 255),rgb(3, 184, 184)) ;
+    border-radius: 120% 120% 200% 200%;
+    box-shadow: black inset 0px -2px 5px,
+                        black 0px 0px 5px;
+    z-index: 1;
+    /* border-radius: 50%; */
+
+}
+.tiles-container{
+    height: 80%;
+    width: 80%;
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    border-radius: 30% 30% ;
+    background: linear-gradient( 180deg, rgb(2, 170, 170) 50%,rgba(3, 184, 184, 0.021)) ;
+   z-index: 10;
+   overflow: hidden;
+    border: 2px ridge rgb(3, 184, 184) ;
+ border-bottom: none;
+ box-shadow: black inset 0px -2px 5px,
+                        black 0px 0px 5px;
+ 
+}
+.speakers{
+    height: 40%;
+    width: 27%;
+    position: absolute;
+    top: 55%;
+    left: -3%;
+    border-radius: 50% 0 0  50% ;
+    background: linear-gradient( 180deg, rgb(2, 170, 170) 50%,rgb(3, 184, 184)) ;
+   z-index: 1000;
+   overflow: hidden;
+    /* border: 2px solid rgb(3, 184, 184) ; */
+ border-bottom: none;
+ box-shadow: black inset 2px 2px 5px,
+ black inset -2px -2px 5px,black 0 0 5px;
+ 
+}
+.speaker2{
+    left: 76%;
+    border-radius:  0 50% 50% 0;
+  
+}
+.top-tiles{
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0%;
+   z-index: 100;
+   overflow: hidden;
+}
+.bottom-tiles{
+    height: 60%;
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    left: 0%;
+   z-index: 10;
+   overflow: hidden;
+ 
+}
+ .tile{
+    height: 100%;
+    width: 16.66%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background: radial-gradient(circle, rgb(247, 80, 211),rgb(4, 247, 234)) ;
+    border-radius: 0 0 10% 10%;
+   z-index: 10;
+   box-shadow:  2px 2px 5px black inset,-2px -2px 5px black inset,
+                        black 0px 0px 5px;
+ /* border: 2px solid rgba(105, 156, 156, 0) ; */
+} 
+.tile:hover{
+    box-shadow: rgb(1, 104, 122)  5px -5px 10px,
+                        rgb(2, 122, 131) 5px 5px 10px;
+
+}
+.tile2{
+    left: 16.66%;
+    background: radial-gradient(circle, rgb(70, 82, 248),rgb(255, 68, 44)) ;
+   
+}
+.tile3{
+    left: 33.32%;
+    background: radial-gradient(circle, rgb(255, 35, 138),rgb(236, 144, 5)) ;
+   
+}
+.tile4{
+    left: 49.98%;
+    background: radial-gradient(circle, rgb(21, 252, 41),rgb(241, 218, 3)) ;
+   
+}
+.tile5{
+    left: 66.64%;
+    background: radial-gradient(circle, rgb(172, 248, 160),rgb(214, 218, 0)) ;
+   
+}
+.bottom-tiles .tile2{
+    background: radial-gradient(circle, rgb(71, 180, 252),rgb(255, 34, 255)) ;
+   
+}
+.bottom-tiles .tile3{
+    background: radial-gradient(circle, rgb(0, 255, 13),rgb(132, 88, 252)) ;
+   
+}
+.bottom-tiles .tile4{
+    left: 49.98%;
+    background: radial-gradient(circle, rgb(251, 255, 0),rgb(8, 51, 243)) ;
+   
+}
+.bottom-tiles .tile5{
+    left: 66.64%;
+    background: radial-gradient(circle, rgb(252, 149, 145),rgb(79, 213, 253)) ;
+   
+}
+.tile6{
+    left: 83.3%;
+    background: radial-gradient(circle, rgb(241, 177, 121),rgb(163, 108, 252)) ;
+ 
+}
+audio{
+    visibility: hidden;
+}
+.speakers::before{
+    content: "";
+    height: 70%;
+    width: 70%;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+   z-index: 10;
+   background: radial-gradient(circle, rgb(255, 0, 212),rgb(136, 1, 75)) ;
+   box-shadow:  2px 2px 5px black inset,-2px -2px 5px black inset,
+                        black 0px 0px 5px;
+ /* border: 0.5px solid rgb(0, 0, 0) ; */
+ border-radius: 50% 0 0  50% ;
+}
+
+.speaker2::before{
+    border-radius:  0 50% 50% 0;
+  
+}
+.speakers::after{
+    content: "";
+    height: 50%;
+    width: 50%;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+   z-index: 100;
+   border-radius: 50% 0 0  50% ;
+   background: radial-gradient(circle, black 20%, transparent 50%);
+   background-size: 5% 5%;
+   background-repeat: repeat;
+}
+
+.speaker2::after{
+    border-radius:  0 50% 50% 0;
+  
+}
+.screen2, .screen1{
+    height: 50%;
+    width: 50%;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+   z-index: 100;
+ background: url(../images/music.gif); 
+ display: none;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="elephant">
+            <div class="head-container">
+                <div class="ear"></div>
+                <div class="ear ear2"></div>
+                <div class="spec-center"></div>
+                   
+                <div class="head">
+                    <!-- <div class="eye-glass"> -->
+                            <div class="specs">
+                                <div class="glass"></div>
+                          
+                            </div>
+                            <div class="specs spec2">
+                                <div class="glass glass2"></div> 
+                    
+                            </div>
+                    <!-- </div> -->
+                    <div class="spec-handle spec-handle2"></div>
+                    <div class="spec-handle spec-handle3"></div>
+                    <div class="spec-handle"></div>
+                    <div class="eye-case">
+                        <div class="eyes">
+                            <div class="inner-eye"></div>
+                        </div>
+                        <div class="eyes eye2">
+                            <div class="inner-eye"></div>
+                        </div>
+                    </div>
+                    <div class="nose"></div>
+                    <div class="mouth"></div>
+                </div>
+            </div>
+            <div class="elephant-body">
+                <div class="body-top"></div>
+                <div class="body-bottom"></div>
+                <div class="tiles-container">
+                    <div class="top-tiles">
+                        <div class="tile btnb1"></div>
+                        <div class="tile tile2 btnb2"></div>
+                        <div class="tile tile3 btnb3"></div>
+                        <div class="tile tile4 btnb4"></div>
+                        <div class="tile tile5 btnb5"></div>
+                        <div class="tile tile6 btnb6"></div>
+                    </div> 
+                    <div class="bottom-tiles">
+                        <div class="tile tile2 btnb7"></div>
+                        <div class="tile tile3 btnb8"></div>
+                        <div class="tile tile4 btnb9"></div>
+                        <div class="tile tile5 btnb10"></div>
+                    </div>
+                  
+                </div>
+                <div class="speakers">
+                    <div class="screen1"></div>
+                </div>
+                <div class="speakers speaker2">
+                    <div class="screen2"></div>
+               
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio src="" id="sound"></audio>
+    <!-- <audio src="../sounds/music.mp3" id="music" loop autoplay></audio> -->
+  
+
+   
+    <script src="../js/pause.js"></script>
+    <script src="../js/music.js"></script>
+    <script src="../js/admob.js"></script>
+    <script src="../js/admob.js"></script>
+    
+</body>
+</html>

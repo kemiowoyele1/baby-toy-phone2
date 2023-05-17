@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toy phone home page</title>
+    <link rel="stylesheet" href="../css/numbers.css">
+    <script src="../cordova.js"></script>
+ 
+    <style>
+        
+ .btn-span{
+    top: 50%;
+    left: 50%;
+   font-family: toon;
+  font-size: 50px;
+  text-align: center;
+  transform: translate(-50%, -50%);
+   color: transparent;
+  height: fit-content;
+     width: fit-content;
+     background: rgb(206,237,249);
+    background: linear-gradient(90deg, rgb(9, 117, 5) 0%, rgb(4, 45, 180) 49%, rgb(172, 3, 3) 100%);
+    -webkit-background-clip: text;
+  -webkit-text-stroke: 1px blue;
+  
+ }
+ .screen2{
+     height: fit-content;
+     width: fit-content;
+     top: 50%;
+    left: 50%;
+    font-size: 150px;
+    transform: translate(-75px, -75px);
+   box-shadow: none;
+display: block;
+    background: rgb(35, 240, 28);
+    background: linear-gradient(90deg, rgb(12, 241, 4) 0%, rgb(14, 70, 255) 49%, rgb(182, 8, 8) 100%);
+    -webkit-background-clip: text;
+  color: transparent;
+  /* -webkit-text-stroke:2px rgb(21, 73, 1) ; */
+    animation: skewer 0.5s infinite;
+   }
+   @keyframes skewer{
+    0%{
+           transform: skew(-5deg)
+       }
+       100%{
+           transform: skew(5deg)
+       }
+   }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="phone">
+            <div class="overlay">
+                <div class="callscreen">
+                    <div class="callscreen2"></div>
+                </div>
+            </div>
+            <div class="top-slide">
+                <div class="lights-container">
+                    <div class="lights light1"></div>
+                    <div class="lights light2"></div>
+                    <div class="lights light3"></div>
+                    <div class="lights light4"></div>
+                    <div class="dash"></div>
+                </div>
+                <div class="screen1">
+                    <div class="screen2"></div>
+                </div>
+               
+                
+            </div>
+            <div class="bottom-slide">
+                <div class="button-container">
+                    <div class="btn-after after1"></div>
+                    <div class="btn-after after2"></div>
+                    <div class="btn-after after3"></div>
+                    <div class="btn-after after4"></div>
+                    <div class="btn-after after5"></div>
+                    <div class="btn-after after6"></div>
+                    <div class="btn-after after7" ></div>
+                    <div class="btn-after after8"></div>
+                    <div class="btn-after after9"></div>
+                    <div class="btnb btnb1"><span class="btn-span span1">1</span></div>
+                    <div class="btnb btnb2"><span class="btn-span span2">2</span></div>
+                    <div class="btnb btnb3"><span class="btn-span span3">3</span></div>
+                    <div class="btnb btnb4"><span class="btn-span span4">4</span></div>
+                    <div class="btnb btnb5"><span class="btn-span span5">5</span></div>
+                    <div class="btnb btnb6"><span class="btn-span span6">6</span></div>
+                    <div class="btnb btnb7"><span class="btn-span span7">7</span></div>
+                    <div class="btnb btnb8"><span class="btn-span span8">8</span></div>
+                    <div class="btnb btnb9"><span class="btn-span span9">9</span></div>
+         </div>
+            </div>
+        </div>
+    </div>
+    <audio src="" id="sound"></audio>
+    <audio src="../sounds/music.mp3" id="music" loop autoplay></audio>
+
+    
+    <script src="../js/pause.js"></script>
+  
+    <script src="../js/admob.js"></script>
+
+    <script src="../js/numbers.js"></script>
+</body>
+</html>

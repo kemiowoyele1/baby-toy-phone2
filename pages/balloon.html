@@ -1,0 +1,224 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>baby magic word balloon</title>
+     <!-- <link rel="stylesheet" href="../css/rabbit.css"> -->
+
+  <link rel="stylesheet" href="../css/phone2.css">
+</head>
+<style >
+ 
+  body{
+    cursor:pointer;
+           background: rgb(4,4,94);
+background: linear-gradient(15deg, rgba(4,4,94,1) 0%, rgba(122,122,187,1) 49%, rgba(3,14,80,1) 100%), 
+url(../images/space.gif),url(../images/grass.jpg);
+ background-blend-mode: screen;
+overflow: hidden;
+max-width: 100vw;
+max-height: 100vh;
+overflow: hidden;
+  }
+ 
+  .container{
+     background: rgb(155,39,203);
+      background: rgb(155,39,203);
+      background: linear-gradient(90deg, rgb(39, 143, 203) 0%, rgb(231, 236, 243) 2%, 
+      rgb(33, 159, 217) 10%, rgb(200, 233, 235) 41%, rgb(216, 236, 240) 66%, 
+      rgb(42, 132, 236) 88%, rgb(226, 236, 239) 98%, rgb(5, 73, 176) 100%);
+      /*border: 3px solid rgb(94, 4, 102);*/
+      background-blend-mode: overlay;
+  }
+  #container{
+     position: absolute;
+     height: 98%;
+     width: 98%;
+     top: 1%;
+     left: 1%;
+        padding: 0;
+        margin: 0;
+        /* border: 3px solid rgba(0,55,55,1); */
+      box-sizing: border-box;
+        background: rgb(4,4,94);
+background: linear-gradient(15deg, rgb(1, 1, 2) 0%, rgb(57, 57, 78) 49%, rgb(17, 19, 29) 100%), 
+url(../images/space.gif),url(../images/grass.jpg);
+ background-blend-mode: screen;
+ background-repeat: no-repeat;
+ background-size: 100% 100%;
+      box-shadow: 2px 2px 5px rgb(59, 5, 61), inset 2px 2px 9px rgb(29, 1, 23),inset -2px -2px 9px rgb(29, 1, 23);
+      border-radius: 5%;
+    
+     overflow: hidden;
+  }
+           
+@font-face {
+  font-family: eyes;
+  src: url("../fonts/bullpen.ttf");
+
+}
+  
+ .boxes{
+    font-size: 40px;
+      position: absolute;
+   background-repeat: no-repeat;
+        background-size:100% 100%;
+        background-image:url(../images/1.png);
+        margin-right: 80px;
+        z-index: 20;
+        display: block;
+        width: 100px;
+        height: 120px;
+       /* text-shadow: 1px 1px 0 #448, 1px 1px 0 #448, -2px -2px 0 #448, -1px -1px 3px #448; */
+        background-size: 100% 100%;
+      background-image: radial-gradient(rgba(55,55,100,0.3) 30%, rgba(100,55,155,0.6) 60%, rgba(100,55,200,1) 90%) ;
+      border: 3px solid rgba(90, 40, 130, 0,2);
+      border-radius: 50%;
+      /*transform: translate3d(50px, 50px, 0);*/
+         box-sizing: border-box;
+       transition: all .2s ease-in;
+       text-align: center;
+       padding: 20px;
+        font-family: eyes;
+        font-size: 100px;
+        -webkit-text-stroke: 1px rgb(0, 0, 0);
+        animation: box 0.5s infinite ease-in-out;
+        background-clip: text;
+    }
+   .boxes::before{
+     content: "";
+     position: absolute;
+     border-radius: 50%;
+     border-bottom-left-radius: 10%;
+     border-bottom-right-radius: 10%;
+     width: 10%;
+     height: 5%;
+     background: inherit;
+     top: 100%;
+     left: 45%;
+   }
+   @keyframes box {
+     0%{
+       transform: translate(-5%, -5%)
+     }
+      100%{
+       transform: translate(5%, 5%)
+     }
+   }
+   
+      audio{
+        visibility: hidden;
+      }
+      .remove-box{
+        animation: turn 3s infinite;
+        transition: all 1s;
+        transform:  rotate(30000deg);
+      }
+      @keyframes turn {
+        0%{
+            transform: rotate(0deg);
+            width: 100px;
+            height: 120px;
+        }
+        100%{
+            transform: rotate(30000deg);
+            width: 0px;
+            height: 0px;
+            padding: 0;
+            opacity: 0;
+        }
+      }
+</style>
+<body id="b" >
+
+    <div class="container">
+        
+          <div class="dash"></div>
+        
+          <div class="inner-screen">
+              <div class="call-container">
+                                    <div class="caller"></div>
+                 <div class="pick-container">
+                      <div class="end"></div>
+            
+                 </div>
+
+              </div>
+
+              <div id="container" >
+ 
+    </div>
+</div>
+</div>
+<div class="home-btn"></div>
+  
+</div>
+    <!-- <button id="remove">remove</button> -->
+    <audio controls  autoplay="true" loop="true"><source src="../audio/02.mp3" type="audio/mp3"></audio>
+    <audio controls  id="play1" ><source src="../sounds/musicr.mp3 type="audio/mp3"></audio>
+    <audio id="pop" ><source src="../sounds/squash.mp3" type="audio/mp3"></audio>
+ 
+
+<script src="../js/numbers-array.js"></script>
+<script >
+  var theThing = document.querySelector('#ball');
+  var pop = document.querySelector('#pop');
+  var play1 = document.querySelector('#play1');
+  var container = document.querySelector('#container');
+  var remove = document.querySelector('#remove');
+  container.addEventListener('click', getClickPosition, false);
+    var c = 0;
+  
+ 
+function getClickPosition(e){
+  
+    var song = Math.floor(Math.random()*2)
+
+var colorRandom  = Math.ceil(Math.random()*255)
+var colorR  = Math.ceil(Math.random()*255);
+
+var colorG  = Math.ceil(Math.random()*255);
+
+var colorB  = Math.ceil(Math.random()*255);
+    var randomimg  = Math.ceil(Math.random()*4)
+    var box = document.createElement("div");
+    box.className= "boxes";
+   var xPosition = e.offsetX - 50;
+   var yPosition = e.offsetY - 50;
+  
+       box.style.top = yPosition + "px";
+ box.style.left = xPosition + "px";
+    box.style.background = "radial-gradient(rgba(255,255, 255, 1) 15%,rgba("+ colorRandom + ","+ colorG +"," + colorR + ",0.7) 50%,rgba("+ colorRandom + ","+ colorG +"," + colorR + ",1) 80%)";
+ box.style.color = "rgb(" + colorG + ","+ colorB + "," + colorR+")";
+    pop.src =   "../sounds/111.mp3";
+                             pop.play();
+          
+  container.appendChild(box);
+  box.addEventListener('click', function name(e) {
+                e.preventDefault();
+
+                   this.textContent = ""
+                this.classList.add('remove-box');
+                play1.src =   "../sounds/00.mp3";
+                             play1.play();
+          
+                setTimeout(() => {
+    container.removeChild(box);
+      }, 1000);
+            })
+  setTimeout(() => {
+    container.removeChild(box);
+      // pop.src =   "../sounds/0.mp3";
+                            //  pop.play();
+              
+  
+  }, 16000);
+
+}
+
+
+</script>
+ 
+</body>
+</html>

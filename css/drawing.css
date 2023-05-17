@@ -1,0 +1,161 @@
+
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    @font-face {
+        font-family: ThePerfectMan;
+        src: url("../fonts/KGPrimaryDotsLined.ttf");
+      }
+    
+
+  DavysRibbons
+    body{
+        background: rgb(255, 255, 255);
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+    audio{
+        visibility: hidden;
+    }
+    canvas{
+        max-height: 100vh;
+        max-width: 100vw;
+        overflow: hidden;
+    background: rgb(255, 255, 255);
+      /*background: url("../images/8.png");*/
+     background-size: 100% 100%;
+   position:absolute;
+     }
+     .paints{
+         width: 10%;
+         height: 100vh;
+        border: 0.4px solid black;
+         position:absolute;
+         top: 0vh;
+         left: 0;
+         box-shadow: 0 0 5px rgb(71, 3, 102), inset 0 0 9px rgb(127, 0, 153);
+    background: rgb(0, 0, 0);
+    background-size: 100% 200%;
+    background-repeat: no-repeat;
+    background-image: url("../images/music/kkoko.gif"), linear-gradient(90deg, rgb(46, 44, 46) 0%, 
+    rgb(234, 231, 243) 10%, 
+      rgb(33, 76, 217) 35%, rgb(5, 218, 171) 41%, rgb(203, 9, 221) 66%, 
+      rgb(236, 42, 178) 78%, rgb(248, 129, 99) 88%, rgb(9, 145, 9) 100%);
+     background-blend-mode: screen;
+
+     }
+      .colors{
+         width: 80%;
+         height: 7%;
+        background:blue;
+        border: 2px solid white;
+        border-radius: 10%;
+        box-shadow: 0 0 3px black,inset 0 0 5px black;
+         position:absolute;
+         left: 10%;
+         background-repeat: no-repeat;
+         background-size: 100% 100%;
+     }
+     
+     .color10{
+            top: 2vh;
+                    background-color: orangered;
+        
+     }
+     .color1{
+             background: blue;
+            top: 12vh;
+     }
+     .color2{
+             background:rgb(202, 5, 5);
+            top: 22vh;
+     }
+       .color3{
+             background:green;
+            top: 32vh;
+     }
+       .color4{
+             background:purple;
+            top: 42vh;
+     }
+       .color5{
+             background:deeppink;
+            top: 52vh;
+     }
+       .color6{
+             background:yellow;
+            top: 62vh;
+     }
+       .color7{
+             background: black;
+            top: 72vh;
+     }  
+     .color8{
+            top: 82vh;
+            background: sandybrown;
+      }
+      .color9{
+            top: 92vh;
+            background-image: url('../images/trash.png');
+              background-color: transparent;
+            border: none;
+            box-shadow: none;
+   
+     }
+     .letters{
+      font-size: 500px;
+      position: absolute;
+      top: 50%;
+      left: 55%;
+      transform: translate(-50%, -50%);
+      color: rgb(0, 0, 0);
+      font-family: ThePerfectMan;
+ 
+  }
+  .image{
+   height: 70vh;
+   width: 60vh;
+   position: absolute;
+   top: 50%;
+   left: 55%;
+   transform: translate(-50%, -50%);
+   color: rgb(82, 4, 34);
+   font-family: ThePerfectMan;
+   background-size: 100% 100%;
+
+}
+  canvas{
+      z-index: 10;
+      background-color: transparent;
+  }
+  .paints{
+      z-index: 100;
+  }
+  .next, .back{
+      position: absolute;
+      bottom: 2%;
+      right: 5%;
+      z-index: 100;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      box-shadow: 1px 1px 5px rgb(4, 41, 36), inset 2px 2px 5px rgb(4, 41, 36);
+      border: none;
+      background-color: rgb(35, 240, 240);
+      color: rgb(230, 32, 187);
+  }
+  .back{
+      left: 15%;
+  }
+  .hint{
+      position: absolute;
+      font-size: 50px;
+      right: 5%;
+      top: 5%;
+      color: deeppink;
+      font-weight: 700;
+  }
